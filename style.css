@@ -84,6 +84,7 @@ body {
     hsla(var(--hue), 65%, 88%, 0.34)
   );
 }
+
 /* LAYOUT **********/
 .container {
   margin-left: 1.5rem;
@@ -356,7 +357,7 @@ footer .social a:hover {
     position: absolute;
     top: 8vh;
     right: 0;
-    width: 70vw;
+    width: 50vw;
     height: 92vh;
     background: var(--body-color);
     flex-direction: column;

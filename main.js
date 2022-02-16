@@ -44,13 +44,6 @@ const mobileNavbar = new MobileNavbar(
 mobileNavbar.init()
 
 /* quando clicar em um item do menu, esconder o menu */
-const links = document.querySelectorAll('.nav-list')
-
-for (const link of links) {
-  link.addEventListener('click', function () {
-    nav.classList.remove('active')
-  })
-}
 
 /* Botão voltar para o topo */
 const backToTopButton = document.querySelector('.back-to-top')
