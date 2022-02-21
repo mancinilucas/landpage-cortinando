@@ -43,15 +43,32 @@ const mobileNavbar = new MobileNavbar(
 )
 mobileNavbar.init()
 
+/* abre e fecha menu */
+/*  abre e fecha o menu quando clicar no icone: hamburguer e x */
+// const nav = document.querySelector('.nav-list')
+// const menuMobile = document.querySelector('.mobile-menu')
+// const menuLinks = document.querySelector('.nav-list li a')
+// const toggle = document.querySelectorAll('nav .menu')
+
+// for (const element of toggle) {
+//   element.addEventListener('click', function () {
+//     nav.classList.toggle('active')
+//     menuMobile.classList.toggle('active')
+//     animateLinks()
+//   })
+// }
 /* quando clicar em um item do menu, esconder o menu */
+// const links = document.querySelectorAll('.nav-list li a')
 
-/* Botão voltar para o topo */
-const backToTopButton = document.querySelector('.back-to-top')
+// Array.from(links).forEach(link => {
+//   link.addEventListener('click', function () {
+//     document.getElementsByClassName('nav-list').map()
+//   })
+// })
 
-function backToTop() {
-  if (window.scrollY >= 796) {
-    backToTopButton.classList.add('show')
-  } else {
-    backToTopButton.classList.remove('show')
-  }
-}
+/* Testimonials carousel slider swiper */
+const swiper = new Swiper('.swiper-container', {
+  slidesPerView: 1,
+  mousewheel: true,
+  keyboard: true
+})

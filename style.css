@@ -235,6 +235,27 @@ main {
   font-size: var(--text-font-size);
 }
 
+/* GALLERY **********/
+.swiper-slide {
+  height: auto;
+  padding: 4rem 1rem;
+}
+
+.swiper-slide img {
+  border-radius: 0.25rem;
+  height: 16rem;
+  object-fit: cover;
+}
+
+.swiper-pagination-bullet {
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+.swiper-pagination-bullet-active {
+  background: var(--base-color);
+}
+
 /* CONTACT **********/
 #contact .container {
   margin: 0;

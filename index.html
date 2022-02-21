@@ -10,6 +10,11 @@
       rel="stylesheet"
     />
 
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+
     <link rel="stylesheet" href="assets/fonts/style.css" />
 
     <link rel="stylesheet" href="style.css" />
@@ -25,8 +30,9 @@
           <div class="line2"></div>
           <div class="line3"></div>
         </div>
-        <ul class="grid nav-list">
+        <ul class="grid menu nav-list">
           <li><a href="#home">Início</a></li>
+          <li><a href="#gallery">Serviços</a></li>
           <li><a href="#contact">Contato</a></li>
         </ul>
       </nav>
@@ -50,6 +56,43 @@
               target="_blank"
               >Solicitar um orçamento</a
             >
+          </div>
+        </div>
+      </section>
+
+      <div class="divider"></div>
+
+      <section class="section" id="gallery">
+        <div class="container">
+          <header>
+            <h2 class="title">Serviços</h2>
+          </header>
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="./assets/services/pic1.jpeg" alt="foto1" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/services/pic2.jpeg" alt="foto2" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/services/pic3.jpeg" alt="foto3" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/services/pic4.jpeg" alt="foto4" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/services/pic5.jpeg" alt="foto5" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/services/pic6.jpeg" alt="foto6" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/services/pic7.jpeg" alt="foto7" />
+              </div>
+            </div>
+
+            <div class="swiper-pagination"></div>
           </div>
         </div>
       </section>
@@ -107,6 +150,8 @@
     </footer>
 
     <a href="#home" class="back-to-top"><i class="icon-arrow-up"></i></a>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
     <script src="main.js"></script>
   </body>
