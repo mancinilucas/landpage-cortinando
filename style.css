@@ -21,9 +21,9 @@ img {
   --header-height: 4.5rem;
 
   /* COLORS */
-  --hue: 216;
+  --hue: 219;
 
-  --base-color: hsl(var(--hue) 80% 35%);
+  --base-color: hsl(var(--hue) 52% 26%);
   --base-color-second: hsl(var(--hue) 65% 88%);
   --base-color-alt: hsl(var(--hue) 57% 53%);
   --title-color: hsl(var(--hue) 41% 10%);
@@ -31,6 +31,9 @@ img {
   --text-color-light: hsl(0 0% 98%);
   --body-color: hsl(0 0% 98%);
   --orange-400: hsl(36 92% 50%);
+  --orange-700: hsl(24, 55%, 47%);
+  --orange-700-alt: hsl(24, 59%, 53%);
+  --base-original: hsl(219, 52%, 26%);
 
   /* FONTS */
 
@@ -48,21 +51,21 @@ html {
 
 body {
   font: 400 1rem var(--body-font);
-  color: hsl(0 0% 46%);
-  background: hsl(0 0% 98%);
+  color: var(--body-color);
+  background: var(--base-color);
   -webkit-font-smoothing: antialiased;
 }
 
 .title {
   font: 700 var(--title-font-size) var(--title-font);
-  color: var(--title-color);
+  color: var(--orange-700);
   -webkit-font-smoothing: auto;
   text-align: center;
 }
 
 .button {
-  background-color: var(--base-color);
-  color: var(--text-color-light);
+  background-color: var(--orange-700);
+  color: var(--base-color);
   height: 3.5rem;
   display: inline-flex;
   align-items: center;
@@ -73,7 +76,7 @@ body {
 }
 
 .button:hover {
-  background: var(--base-color-alt);
+  filter: brightness(0.7);
 }
 
 .divider {
@@ -110,7 +113,7 @@ body {
 
 /* HEADER *************/
 #header {
-  border-bottom: 1px solid #e4e4e4;
+  border-bottom: 1px solid var(--base-color);
   margin-bottom: 2rem;
   display: flex;
 
@@ -118,7 +121,7 @@ body {
   top: 0;
   left: 0;
   z-index: 100;
-  background-color: var(--body-color);
+  background-color: var(--base-color);
   width: 100%;
   height: 4.5rem;
 }
@@ -134,7 +137,7 @@ body {
 }
 
 .logo span {
-  color: var(--orange-400);
+  color: #000;
 }
 
 .logo-alt span {
@@ -150,6 +153,10 @@ nav {
   justify-content: space-between;
 }
 
+nav .logo {
+  color: var(--orange-700);
+}
+
 .nav-list {
   display: flex;
 }
@@ -162,7 +169,7 @@ nav {
 }
 
 .nav-list li a {
-  color: var(--base-color);
+  color: var(--text-color-light);
 }
 
 .mobile-menu {
@@ -173,7 +180,7 @@ nav {
 .mobile-menu div {
   width: 2rem;
   height: 2px;
-  background: var(--base-color);
+  background: var(--orange-700);
   margin: 0.5rem;
   transition: 0.3s;
 }
@@ -200,7 +207,7 @@ main {
   content: '';
   height: 100%;
   width: 100%;
-  background: var(--orange-400);
+  background: var(--orange-700);
   position: absolute;
   top: -16.8%;
   left: 16.7%;
@@ -231,12 +238,10 @@ main {
 #home .text p {
   margin-bottom: 2rem;
   font-size: var(--text-font-size);
+  color: var(--orange-700);
 }
 
 /* GALLERY **********/
-#gallery {
-  background: #fff;
-}
 
 #gallery .container {
   margin-left: 0;
@@ -283,7 +288,7 @@ main {
 }
 
 .swiper-pagination-bullet-active {
-  background: var(--base-color);
+  background: var(--text-color-light);
 }
 
 /* CONTACT **********/
@@ -328,12 +333,12 @@ main {
 }
 
 #contact ul li i {
-  color: var(--base-color);
+  color: var(--orange-700);
 }
 
 /* FOOTER **********/
 footer {
-  background-color: var(--orange-400);
+  background-color: var(--orange-700);
 }
 
 footer.section {
@@ -348,10 +353,11 @@ footer .logo {
 footer .brand p {
   color: var(--text-color-light);
   margin-bottom: 0.75rem;
+  font-size: 0.875rem;
 }
 
 footer i {
-  font-size: 1.5rem;
+  font-size: 2rem;
   color: var(--base-color);
 }
 
@@ -414,7 +420,7 @@ footer .social a:hover {
     right: 0;
     width: 50vw;
     height: 92vh;
-    background: var(--body-color);
+    background: var(--base-color);
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
@@ -461,6 +467,7 @@ footer .social a:hover {
 
 @media (min-width: 1200px) {
   /* reusable classes */
+
   .container {
     max-width: 1120px;
     margin-left: auto;
@@ -472,7 +479,7 @@ footer .social a:hover {
   }
 
   .section header,
-  #testimonials header {
+  #gallery header {
     max-width: 32rem;
     text-align: center;
     margin-left: auto;
@@ -531,24 +538,8 @@ footer .social a:hover {
     text-align: left;
   }
 
-  /* about */
-  #about .container {
-    margin: 0 auto;
-    grid-auto-flow: column;
-  }
-
-  /* services */
-  .cards {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-
-  .cards {
-    padding-left: 3rem;
-    padding-right: 3rem;
-  }
-
-  /* testimonials */
-  #testimonials .container {
+  /* gallery */
+  #gallery .container {
     margin-left: auto;
     margin-right: auto;
   }

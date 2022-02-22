@@ -43,30 +43,7 @@ const mobileNavbar = new MobileNavbar(
 )
 mobileNavbar.init()
 
-/* abre e fecha menu */
-/*  abre e fecha o menu quando clicar no icone: hamburguer e x */
-// const nav = document.querySelector('.nav-list')
-// const menuMobile = document.querySelector('.mobile-menu')
-// const menuLinks = document.querySelector('.nav-list li a')
-// const toggle = document.querySelectorAll('nav .menu')
-
-// for (const element of toggle) {
-//   element.addEventListener('click', function () {
-//     nav.classList.toggle('active')
-//     menuMobile.classList.toggle('active')
-//     animateLinks()
-//   })
-// }
-/* quando clicar em um item do menu, esconder o menu */
-// const links = document.querySelectorAll('.nav-list li a')
-
-// Array.from(links).forEach(link => {
-//   link.addEventListener('click', function () {
-//     document.getElementsByClassName('nav-list').map()
-//   })
-// })
-
-/* Testimonials carousel slider swiper */
+/* Gallery carousel slider swiper */
 const swiper = new Swiper('.swiper-container', {
   slidesPerView: 1,
   pagination: {
