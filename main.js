@@ -1,47 +1,21 @@
-class MobileNavbar {
-  constructor(mobileMenu, navList, navLinks) {
-    this.mobileMenu = document.querySelector(mobileMenu)
-    this.navList = document.querySelector(navList)
-    this.navLinks = document.querySelectorAll(navLinks)
-    this.activeClass = 'active'
+/*  abre e fecha o menu quando clicar no icone: hamburguer e x */
+const nav = document.querySelector('#header nav')
+const toggle = document.querySelectorAll('nav .toggle')
 
-    this.handleClick = this.handleClick.bind(this)
-  }
-
-  animateLinks() {
-    this.navLinks.forEach((link, index) => {
-      link.style.animation
-        ? (link.style.animation = '')
-        : (link.style.animation = `navLinkFade 0.5s ease forwards ${
-            index / 7 + 0.3
-          }s`)
-    })
-  }
-
-  handleClick() {
-    this.navList.classList.toggle(this.activeClass)
-    this.mobileMenu.classList.toggle(this.activeClass)
-    this.animateLinks()
-  }
-
-  addClickEvent() {
-    this.mobileMenu.addEventListener('click', this.handleClick)
-  }
-
-  init() {
-    if (this.mobileMenu) {
-      this.addClickEvent()
-    }
-    return this
-  }
+for (const element of toggle) {
+  element.addEventListener('click', function () {
+    nav.classList.toggle('show')
+  })
 }
 
-const mobileNavbar = new MobileNavbar(
-  '.mobile-menu',
-  '.nav-list',
-  '.nav-list li'
-)
-mobileNavbar.init()
+/* quando clicar em um item do menu, esconder o menu */
+const links = document.querySelectorAll('nav ul li a')
+
+for (const link of links) {
+  link.addEventListener('click', function () {
+    nav.classList.remove('show')
+  })
+}
 
 /* Gallery carousel slider swiper */
 const swiper = new Swiper('.swiper-container', {
