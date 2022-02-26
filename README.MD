@@ -13,7 +13,13 @@
 <br>
 
 <p align="center">
-  <img alt="Landpage" src="" width="100%">
+  <img alt="Landpage" src="/assets/screenshot1.png" width="100%">
+</p>
+
+<br>
+
+<p align="center">
+  <img alt="Landpage" src="/assets/screenshot2.png" width="100%">
 </p>
 
 ## 🚀 Tecnologias
@@ -30,4 +36,4 @@ Landpage para divulgação de contato para empresa de confecção de cortinas.
 
 ## 🔖 Deploy
 
-## [Cortinando - Landpage](https://lmpomodoro.netlify.app/)
+## [Cortinando - Landpage](https://cortinando.vercel.app/)
